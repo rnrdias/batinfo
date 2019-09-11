@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.app.rnr.batinfo.MainActivity">
+
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <ImageView
+                    android:id="@+id/imageBat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.1"
+                    android:contentDescription="@string/imgBat"
+                    android:src="@drawable/bat_a" />
+
+
+                <TextView
+                    android:id="@+id/textBatAmp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/textConsumo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textEstim"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:id="@+id/LinLayBat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/boder"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/bateria"
+                        android:textColor="#000000"
+                        android:textSize="25sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/LinLayBatVolt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.1"
+                            android:contentDescription="@string/imgBatVolt"
+                            android:src="@drawable/icon_volt" />
+
+                        <TextView
+                            android:id="@+id/textVolt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinLayBatAmp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.1"
+                            android:contentDescription="@string/imgBatCorr"
+                            android:src="@drawable/icon_amp" />
+
+                        <TextView
+                            android:id="@+id/textAmp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinLayBatPorcent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.1"
+                            android:contentDescription="@string/imgBat"
+                            android:src="@drawable/icon_bat" />
+
+                        <TextView
+                            android:id="@+id/textPorcent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinLayBatTemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.1"
+                            android:contentDescription="@string/imgBatTemp"
+                            android:src="@drawable/icon_temp" />
+
+                        <TextView
+                            android:id="@+id/textTemp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinLayBatSaud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.1"
+                            android:contentDescription="@string/imgBatSaud"
+                            android:src="@drawable/icon_saud" />
+
+                        <TextView
+                            android:id="@+id/textSaud"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/LinLayCarr"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/boder"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/carregador"
+                        android:textColor="#000000"
+                        android:textSize="25sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/black" />
+
+
+                    <LinearLayout
+                        android:id="@+id/LinLayCarrVolt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.1"
+                            android:contentDescription="@string/imgCarrVolt"
+                            android:src="@drawable/icon_volt" />
+
+                        <TextView
+                            android:id="@+id/textCarrVolt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinLayCarrAmp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1.0"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:layout_margin="1dp"
+                            android:src="@drawable/icon_amp"
+                            android:contentDescription="@string/imgCarrAmp"/>
+                        <TextView
+                            android:id="@+id/textCarrAmp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/LinLayCarrUSB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.1"
+                            android:contentDescription="@string/imgUsb"
+                            android:src="@drawable/icon_usb" />
+
+                        <TextView
+                            android:id="@+id/textCarrUsb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinLayCarrFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.1"
+                            android:contentDescription="@string/imgCarr"
+                            android:src="@drawable/icon_carr" />
+
+                        <TextView
+                            android:id="@+id/textCarrFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LinLayCarrWireless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.1"
+                            android:contentDescription="@string/imgCarrWire"
+                            android:src="@drawable/icon_carr_wireless" />
+
+                        <TextView
+                            android:id="@+id/textCarrWire"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BatInfo</string>
+    <string name="imgBat">Icone bateria</string>
+    <string name="imgBatVolt">Icone bateria volt</string>
+    <string name="imgBatCorr">Icone bateria corrente</string>
+    <string name="imgBatTemp">Icone bateria temperatura</string>
+    <string name="imgBatSaud">Icone bateria saúde</string>
+    <string name="imgCarrVolt">Icone carregador volt</string>
+    <string name="imgCarrAmp">Icone carregador Amp</string>
+    <string name="imgUsb">Icone USB</string>
+    <string name="imgCarr">Icone carregador</string>
+    <string name="imgCarrWire">Icone carregador wireless</string>
+    <string name="carregador">Carregador</string>
+    <string name="bateria">Bateria</string>
+</resources>
