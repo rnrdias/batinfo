@@ -1,6 +1,8 @@
 # BatInfo
 Simples aplicativo para o monitoramento da bateria.
 
+<img src="https://raw.githubusercontent.com/rnrdias/batinfo/master/screenshots/01-MainPortrait.png" width="320" height="569" />
+
 Caracteristicas:
 - Corrente da bateria em miliamperes
 - Tensão da bateria em Volts
